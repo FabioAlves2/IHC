@@ -1,5 +1,6 @@
 package com.example.ihc
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import com.example.ihc.databinding.Cacifo3Binding
@@ -26,5 +27,18 @@ class Cacifo3Activity : ComponentActivity() {
         val mensagem1 = codigo.joinToString(separator = "")
         binding.textView2.text=mensagem1
 
+        binding.back.setOnClickListener{
+            val intent = Intent(this@Cacifo3Activity, Livro1Activity::class.java)
+            startActivity(intent)
+        }
+
+        binding.settingsCogIcon.setOnClickListener{
+            val intent = Intent(this@Cacifo3Activity, AccountActivity::class.java)
+            startActivity(intent)
+        }
+        binding.voltar.setOnClickListener {
+            val intent = Intent(this@Cacifo3Activity, HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
