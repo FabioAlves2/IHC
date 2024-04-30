@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/settingsCogIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_icon"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/StudySyncTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="@string/app_name"
+        android:textColor="#07730B"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/background1"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+
+        <!-- EditText for the date -->
+        <TextView
+            android:id="@+id/NameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alugar Cacifo"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="350dp"
+            android:layout_height="380dp"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecione um dos cacifos disponíveis:"
+            android:layout_alignStart="@id/background"
+            android:layout_alignEnd="@id/background"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/cacifo1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_alignStart="@id/background"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#E6706E6E"
+            android:text="1"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="#E6706E6E"
+            android:text="2"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@id/background"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="#E6706E6E"
+            android:layout_marginEnd="10dp"
+            android:text="3"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/cacifo4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="160dp"
+            android:layout_alignStart="@id/background"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#E6706E6E"
+            android:text="4"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo5"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:backgroundTint="@color/black"
+            android:text="5"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo6"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@id/background"
+            android:layout_marginTop="160dp"
+            android:backgroundTint="#E6706E6E"
+            android:layout_marginEnd="10dp"
+            android:text="6"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/cacifo7"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="220dp"
+            android:layout_alignStart="@id/background"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#E6706E6E"
+            android:text="7"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo8"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="220dp"
+            android:backgroundTint="#E6706E6E"
+            android:text="8"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo9"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@id/background"
+            android:layout_marginTop="220dp"
+            android:backgroundTint="#E6706E6E"
+            android:layout_marginEnd="10dp"
+            android:text="9"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/cacifo10"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="280dp"
+            android:layout_alignStart="@id/background"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/black"
+            android:text="10"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo11"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="280dp"
+            android:backgroundTint="#E6706E6E"
+            android:text="11"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cacifo12"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@id/background"
+            android:layout_marginTop="280dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:text="12"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

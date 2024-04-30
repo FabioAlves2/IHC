@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/settingsCogIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_icon"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/StudySyncTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="@string/app_name"
+        android:textColor="#07730B"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/backgorund1"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+
+        <!-- EditText for the date -->
+        <TextView
+            android:id="@+id/NameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encontrar Livro"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="350dp"
+            android:layout_height="410dp"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+        <FrameLayout
+            android:id="@+id/clickable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/background"
+            android:layout_alignRight="@id/background"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#E6D3D3D3"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onGrayButtonClick">
+
+            <!-- LinearLayout for EditText views -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- EditText for 'Nome' -->
+                <TextView
+                    android:id="@+id/nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+
+                    android:text="Nome: " />
+
+                <!-- EditText for 'Autor' -->
+                <TextView
+                    android:id="@+id/autor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Autor: " />
+
+                <!-- EditText for 'Data' -->
+                <TextView
+                    android:id="@+id/data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Data: " />
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/clickable2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/background"
+            android:layout_alignRight="@id/background"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="90dp"
+            android:background="#E6D3D3D3"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onGrayButtonClick">
+
+            <!-- LinearLayout for EditText views -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- EditText for 'Nome' -->
+                <TextView
+                    android:id="@+id/nome2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="Nome: " />
+
+                <!-- EditText for 'Autor' -->
+                <TextView
+                    android:id="@+id/autor2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Autor: " />
+
+                <!-- EditText for 'Data' -->
+                <TextView
+                    android:id="@+id/data2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Data: " />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/clickable3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/background"
+            android:layout_alignRight="@id/background"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="170dp"
+            android:background="#E6D3D3D3"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            android:onClick="onGrayButtonClick">
+
+            <!-- LinearLayout for EditText views -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- EditText for 'Nome' -->
+                <TextView
+                    android:id="@+id/nome3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+
+                    android:text="Nome: " />
+
+                <!-- EditText for 'Autor' -->
+                <TextView
+                    android:id="@+id/autor3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Autor: " />
+
+                <!-- EditText for 'Data' -->
+                <TextView
+                    android:id="@+id/data3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Data: " />
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/clickable4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/background"
+            android:layout_alignRight="@id/background"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="250dp"
+            android:background="#E6D3D3D3"
+            android:visibility="invisible"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onGrayButtonClick">
+
+            <!-- LinearLayout for EditText views -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- EditText for 'Nome' -->
+                <TextView
+                    android:id="@+id/nome4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+
+                    android:text="Nome: " />
+
+                <!-- EditText for 'Autor' -->
+                <TextView
+                    android:id="@+id/autor4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Autor: " />
+
+                <!-- EditText for 'Data' -->
+                <TextView
+                    android:id="@+id/data4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Data: " />
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/clickable5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/background"
+            android:layout_alignRight="@id/background"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="330dp"
+            android:background="#E6D3D3D3"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:focusable="true"
+            android:onClick="onGrayButtonClick">
+
+            <!-- LinearLayout for EditText views -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- EditText for 'Nome' -->
+                <TextView
+                    android:id="@+id/nome5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+
+                    android:text="Nome: " />
+
+                <!-- EditText for 'Autor' -->
+                <TextView
+                    android:id="@+id/autor5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Autor: " />
+
+                <!-- EditText for 'Data' -->
+                <TextView
+                    android:id="@+id/data5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@null"
+                    android:text="Data: " />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

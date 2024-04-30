@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/homeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_icon"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/settingsCogIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_icon"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/StudySyncTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="@string/app_name"
+        android:textColor="#07730B"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/dateSelector"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+        <!-- Left arrow for the date selector -->
+        <ImageButton
+            android:id="@+id/leftArrowDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back_selector"
+            android:padding="10dp"
+            android:background="?android:selectableItemBackground"
+            android:layout_alignTop="@id/dateSelector"
+            android:layout_alignBottom="@id/dateSelector"
+            android:layout_alignStart="@id/dateSelector"/>
+
+        <!-- EditText for the date -->
+        <EditText
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/rightArrowDate"
+            android:layout_toEndOf="@id/leftArrowDate"
+            android:layout_alignTop="@id/leftArrowDate"
+            android:layout_alignBottom="@id/leftArrowDate"
+            android:textAlignment="center"
+            android:inputType="date"
+            android:background="@null"
+            android:padding="10dp"/>
+
+        <!-- Right arrow for the date selector -->
+        <ImageButton
+            android:id="@+id/rightArrowDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_foward_selector"
+            android:padding="10dp"
+            android:background="?android:selectableItemBackground"
+            android:layout_alignTop="@id/dateSelector"
+            android:layout_alignBottom="@id/dateSelector"
+            android:layout_alignEnd="@id/dateSelector"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="350dp"
+            android:layout_height="380dp"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+        <!-- Text View -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hora de Inicio"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignTop="@id/background"
+            android:layout_alignStart="@id/background"/>
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textView"
+            android:layout_alignEnd="@id/background"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_button"
+            android:layout_marginStart="20dp"
+            android:layout_alignTop="@id/textView"
+            android:layout_alignBottom="@id/textView"/>
+
+        <!-- Text View -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hora de Término"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="180dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignTop="@id/background"
+            android:layout_alignStart="@id/background"/>
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textView2"
+            android:layout_alignEnd="@id/background"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:popupBackground="@color/white"
+            android:layout_alignTop="@id/textView2"
+            android:layout_alignBottom="@id/textView2"/>
+
+        <Button
+            android:id="@+id/confirmar"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:text="Confirmar"
+            android:layout_alignBottom="@id/background"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
