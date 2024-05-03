@@ -27,10 +27,6 @@ class Cacifo3Activity : ComponentActivity() {
         val mensagem1 = codigo.joinToString(separator = "")
         binding.textView2.text=mensagem1
 
-        binding.back.setOnClickListener{
-            val intent = Intent(this@Cacifo3Activity, Livro1Activity::class.java)
-            startActivity(intent)
-        }
 
         binding.settingsCogIcon.setOnClickListener{
             val intent = Intent(this@Cacifo3Activity, AccountActivity::class.java)
