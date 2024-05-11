@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:contentDescription="TODO" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="135dp"
+            android:text="Seu Perfil"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/primeiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Nome"/>
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/backgorund1"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignStart="@id/nome"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+
+        <!-- EditText for the date -->
+        <TextView
+            android:id="@+id/NomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/backgorund1"
+            android:text=""
+            android:layout_alignStart="@id/backgorund1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:padding="10dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/segundo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Telefone"/>
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/backgorund2"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignStart="@id/telefone"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+
+        <!-- EditText for the date -->
+        <TextView
+            android:id="@+id/telefoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/backgorund2"
+            android:text=""
+            android:layout_alignStart="@id/backgorund2"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:padding="10dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/terceiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Email"/>
+
+        <!-- ImageView for the background of the date selector -->
+        <ImageView
+            android:id="@+id/backgorund3"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignStart="@id/email"
+            android:layout_centerHorizontal="true"
+            android:background="#B385A85D" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/backgorund3"
+            android:text=""
+            android:layout_alignStart="@id/backgorund3"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grade"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:padding="10dp">
+
+        <!-- Square 1 -->
+        <LinearLayout
+            android:id="@+id/quadrado"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/card_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/square1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- Square 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/card_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/square2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- Square 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/card_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/square3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- Square 4 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/card_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/square4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>
