@@ -1,54 +1,60 @@
 package com.example.ihc
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.ihc.databinding.LoginBinding
-import com.example.ihc.ui.theme.IHCTheme
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+
 
 class MainActivity : ComponentActivity() {
     private lateinit var binding: LoginBinding
+    private lateinit var auth: FirebaseAuth;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        auth = Firebase.auth
+        var user = auth.currentUser
+        if(user != null){
+            val intent = Intent(this@MainActivity, HomeActivity::class.java)
+            startActivity(intent)
+        }else{
+            setContentView(binding.root)
+        }
+
 
         //Verificação de credenciais
         binding.butLogin.setOnClickListener{
             val email = binding.editTextTextEmailAddress.text.toString().trim()
             val password = binding.editTextTextPassword.text.toString().trim()
 
-            if (email.endsWith("@ua.pt")){
-                if (password == "1234"){
-                    binding.errLogin.text="Login Sucessido"
-                    val intent = Intent(this@MainActivity, HomeActivity::class.java)
-                    startActivity(intent)
-                }
-                else if(password==""){
-                    binding.errLogin.text="Por favor, insira a sua password."
-                    binding.editTextTextPassword.text.clear()
-                }
-                else{
-                    binding.errLogin.text="A palavra passe inserida é incorreta."
-                    binding.editTextTextPassword.text.clear()
-                }
-            }
-            else{
-                binding.errLogin.text="O email inserido não pertence à instituição."
-                binding.editTextTextEmailAddress.text.clear()
-                binding.editTextTextPassword.text.clear()
+
+            if(binding.editTextTextEmailAddress.text.isNotEmpty() || binding.editTextTextPassword.text.isNotEmpty()){
+                auth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this){ signIn ->
+                            if(signIn.isSuccessful){
+                                Log.d(TAG, "signInWithEmailAndPassword:success")
+                                user = auth.currentUser
+                                Toast.makeText(this@MainActivity, "Login com sucesso!", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this@MainActivity, HomeActivity::class.java)
+                                startActivity(intent)
+                            }else{
+                                Log.w(TAG, "signInWithEmailAndPassword:failure", signIn .exception)
+                                Toast.makeText(this@MainActivity, "Erro! Verifique as suas credenciais", Toast.LENGTH_SHORT).show()
+                                binding.editTextTextEmailAddress.text.clear()
+                                binding.editTextTextPassword.text.clear()
+                            }
+                    }
+
+            }else{
+                Toast.makeText(this@MainActivity, "Preencha os campos acima para efetuar login!", Toast.LENGTH_SHORT).show()
             }
         }
     }
 }
-

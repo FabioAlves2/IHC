@@ -17,16 +17,14 @@ class Livro3Activity : ComponentActivity() {
 
 
         val dados = intent.extras
-        val nome = dados?.getString("Nome")
-        val autor = dados?.getString("Autor")
-        val data = dados?.getString("Data")
+        val nome = dados?.getString("Nome")?.split(":")?.get(1)?.trim()
+        val autor = dados?.getString("Autor")?.split(":")?.get(1)?.trim()
+        val data = dados?.getString("Data")?.split(":")?.get(1)?.trim()
+        val piso = dados?.getString("loca")?.split("-")?.get(0)?.trim()
+        val estante = dados?.getString("loca")?.split("-")?.get(1)?.trim()
+        val prateleira = dados?.getString("loca")?.split("-")?.get(2)?.trim()
 
-        //dados da base de dados, hardcoded de momento
-        val piso = "3"
-        val estante = "12"
-        val prateleira = "512.2"
-
-        val mensagem = "O livro $nome de $data do autor $autor encontra-se disponível no:"
+        val mensagem = "O livro $nome do autor $autor lançado em $data encontra-se disponível no:"
         binding.textView.text = mensagem
         val mensagem2 = "Piso: $piso \n Estante: $estante\n Prateleira: $prateleira"
         binding.textView2.text = mensagem2

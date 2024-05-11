@@ -5,13 +5,17 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import com.example.ihc.databinding.AccountBinding
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class AccountActivity : ComponentActivity() {
     private lateinit var binding: AccountBinding
-
+    private lateinit var auth: FirebaseAuth;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = AccountBinding.inflate(layoutInflater)
+        auth = Firebase.auth
         setContentView(binding.root)
 
         binding.back.setOnClickListener{
@@ -20,7 +24,7 @@ class AccountActivity : ComponentActivity() {
         }
 
         binding.perfil.setOnClickListener{
-            val intent = Intent(this@AccountActivity, HomeActivity::class.java)
+            val intent = Intent(this@AccountActivity, ProfileActivity::class.java)
             startActivity(intent)
         }
         binding.help.setOnClickListener {
@@ -33,6 +37,7 @@ class AccountActivity : ComponentActivity() {
             builder.setMessage("Quer mesmo fazer logout da sua conta?")
             builder.setPositiveButton("Sim") { _, _ ->
                 // Navigate to MainActivity
+                Firebase.auth.signOut()
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)

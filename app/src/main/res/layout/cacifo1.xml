@@ -110,18 +110,24 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_marginTop="100dp"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
             android:layout_alignStart="@id/background"
             android:layout_marginStart="10dp"
-            android:backgroundTint="#E6706E6E"
+            android:backgroundTint="@color/black"
             android:text="1"
             android:textColor="#FFFFFF" />
         <Button
             android:id="@+id/cacifo2"
             android:layout_width="100dp"
             android:layout_height="50dp"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
-            android:backgroundTint="#E6706E6E"
+            android:backgroundTint="@color/black"
             android:text="2"
             android:textColor="#FFFFFF" />
         <Button
@@ -130,7 +136,10 @@
             android:layout_height="50dp"
             android:layout_alignEnd="@id/background"
             android:layout_marginTop="100dp"
-            android:backgroundTint="#E6706E6E"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
+            android:backgroundTint="@color/black"
             android:layout_marginEnd="10dp"
             android:text="3"
             android:textColor="#FFFFFF" />
@@ -142,7 +151,10 @@
             android:layout_marginTop="160dp"
             android:layout_alignStart="@id/background"
             android:layout_marginStart="10dp"
-            android:backgroundTint="#E6706E6E"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
+            android:backgroundTint="@color/black"
             android:text="4"
             android:textColor="#FFFFFF" />
         <Button
@@ -151,6 +163,9 @@
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="160dp"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
             android:backgroundTint="@color/black"
             android:text="5"
             android:textColor="#FFFFFF" />
@@ -160,7 +175,10 @@
             android:layout_height="50dp"
             android:layout_alignEnd="@id/background"
             android:layout_marginTop="160dp"
-            android:backgroundTint="#E6706E6E"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
+            android:backgroundTint="@color/black"
             android:layout_marginEnd="10dp"
             android:text="6"
             android:textColor="#FFFFFF" />
@@ -172,7 +190,10 @@
             android:layout_marginTop="220dp"
             android:layout_alignStart="@id/background"
             android:layout_marginStart="10dp"
-            android:backgroundTint="#E6706E6E"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
+            android:backgroundTint="@color/black"
             android:text="7"
             android:textColor="#FFFFFF" />
         <Button
@@ -181,7 +202,10 @@
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="220dp"
-            android:backgroundTint="#E6706E6E"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
+            android:backgroundTint="@color/black"
             android:text="8"
             android:textColor="#FFFFFF" />
         <Button
@@ -190,7 +214,10 @@
             android:layout_height="50dp"
             android:layout_alignEnd="@id/background"
             android:layout_marginTop="220dp"
-            android:backgroundTint="#E6706E6E"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
+            android:backgroundTint="@color/black"
             android:layout_marginEnd="10dp"
             android:text="9"
             android:textColor="#FFFFFF" />
@@ -202,6 +229,9 @@
             android:layout_marginTop="280dp"
             android:layout_alignStart="@id/background"
             android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
             android:backgroundTint="@color/black"
             android:text="10"
             android:textColor="#FFFFFF" />
@@ -211,7 +241,10 @@
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="280dp"
-            android:backgroundTint="#E6706E6E"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
+            android:backgroundTint="@color/black"
             android:text="11"
             android:textColor="#FFFFFF" />
         <Button
@@ -220,6 +253,9 @@
             android:layout_height="50dp"
             android:layout_alignEnd="@id/background"
             android:layout_marginTop="280dp"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="8dp"
+            android:gravity="center|center_vertical"
             android:backgroundTint="@color/black"
             android:layout_marginEnd="10dp"
             android:text="12"

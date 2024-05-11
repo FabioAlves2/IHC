@@ -1,5 +1,6 @@
 package com.example.ihc
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -43,11 +44,21 @@ class Cacifo2Activity : ComponentActivity() {
             if (selecteditem>selecteditem2){
                 Toast.makeText(this@Cacifo2Activity,"Redifina o horário", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this@Cacifo2Activity, Cacifo3Activity::class.java)
-                intent.putExtra("horas",hours[selecteditem])
-                intent.putExtra("horas2",hours2[selecteditem2])
-                intent.putExtra("num",num)
-                startActivity(intent)
+                val builder = AlertDialog.Builder(this@Cacifo2Activity)
+                builder.setTitle("Confirmação")
+                val mensagem2 = "Quer mesmo reservar o cacifo $num das " + hours[selecteditem]+ " às " + hours2[selecteditem2]
+                builder.setMessage(mensagem2)
+                builder.setPositiveButton("Sim ") { _, _ ->
+                    val intent = Intent(this@Cacifo2Activity, Cacifo3Activity::class.java)
+                    intent.putExtra("horas",hours[selecteditem])
+                    intent.putExtra("horas2",hours2[selecteditem2])
+                    intent.putExtra("num",num)
+                    startActivity(intent)
+                }
+                builder.setNegativeButton("Cancelar") { _, _ ->
+                }
+                val dialog = builder.create()
+                dialog.show()
             }
         }
 
