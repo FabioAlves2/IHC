@@ -27,7 +27,7 @@ class Livro1Activity : ComponentActivity() {
         }
 
         binding.settingsCogIcon.setOnClickListener{
-            val intent = Intent(this@Livro1Activity, AccountActivity::class.java)
+            val intent = Intent(this@Livro1Activity, ProfileActivity::class.java)
             startActivity(intent)
         }
 

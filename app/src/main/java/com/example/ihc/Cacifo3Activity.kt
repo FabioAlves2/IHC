@@ -17,6 +17,7 @@ class Cacifo3Activity : ComponentActivity() {
     private lateinit var binding: Cacifo3Binding
     private lateinit var database: FirebaseDatabase
     private lateinit var ref: DatabaseReference
+    private lateinit var uref: DatabaseReference
     private lateinit var auth: FirebaseAuth;
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,7 @@ class Cacifo3Activity : ComponentActivity() {
         setContentView(binding.root)
         database = Firebase.database
         ref = database.getReference("Cacifos")
+        uref = database.getReference("Utilizadores")
         auth = Firebase.auth
         var user = auth.currentUser
 
@@ -50,12 +52,12 @@ class Cacifo3Activity : ComponentActivity() {
 
         //Associar o cacifo ao utilizador
         if (user != null) {
-            ref.child(user.uid).child("cacifo").setValue(cacifo)
+            uref.child(user.uid).child("cacifo").setValue(cacifo)
         }
 
 
         binding.settingsCogIcon.setOnClickListener{
-            val intent = Intent(this@Cacifo3Activity, AccountActivity::class.java)
+            val intent = Intent(this@Cacifo3Activity, ProfileActivity::class.java)
             startActivity(intent)
         }
         binding.voltar.setOnClickListener {

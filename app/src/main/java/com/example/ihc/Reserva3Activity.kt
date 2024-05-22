@@ -16,7 +16,7 @@ class Reserva3Activity : ComponentActivity() {
         setContentView(binding.root)
 
         binding.settingsCogIcon.setOnClickListener{
-            val intent = Intent(this@Reserva3Activity, AccountActivity::class.java)
+            val intent = Intent(this@Reserva3Activity, ProfileActivity::class.java)
             startActivity(intent)
         }
         binding.voltar.setOnClickListener {

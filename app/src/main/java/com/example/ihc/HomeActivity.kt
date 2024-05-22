@@ -17,7 +17,7 @@ class HomeActivity : ComponentActivity() {
 
         //Botão do perfil
         binding.settingsCogIcon.setOnClickListener{
-            val intent = Intent(this@HomeActivity, AccountActivity::class.java)
+            val intent = Intent(this@HomeActivity, ProfileActivity::class.java)
             startActivity(intent)
         }
 
@@ -26,6 +26,7 @@ class HomeActivity : ComponentActivity() {
             val intent = Intent(this@HomeActivity, ReservaActivity::class.java)
             startActivity(intent)
         }
+
         binding.cacifo.setOnClickListener {
             val intent = Intent(this@HomeActivity, Cacifo1Activity::class.java)
             startActivity(intent)
@@ -35,6 +36,8 @@ class HomeActivity : ComponentActivity() {
             val intent = Intent(this@HomeActivity, Livro1Activity::class.java)
             startActivity(intent)
         }
-
+        binding.helpdesk.setOnClickListener {
+            Toast.makeText(this@HomeActivity, "Processo em desenvolvimento", Toast.LENGTH_SHORT).show()
+        }
     }
 }

@@ -131,12 +131,12 @@
 
                 <!-- EditText for 'Data' -->
                 <TextView
-                    android:id="@+id/data"
+                    android:id="@+id/loca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:background="@null"
-                    android:text="Data: " />
+                    android:text="Localização: " />
 
             </LinearLayout>
 
@@ -180,12 +180,12 @@
 
                 <!-- EditText for 'Data' -->
                 <TextView
-                    android:id="@+id/data2"
+                    android:id="@+id/loca2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:background="@null"
-                    android:text="Data: " />
+                    android:text="Localização: " />
 
             </LinearLayout>
 
@@ -232,12 +232,12 @@
 
                 <!-- EditText for 'Data' -->
                 <TextView
-                    android:id="@+id/data3"
+                    android:id="@+id/loca3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:background="@null"
-                    android:text="Data: " />
+                    android:text="Localização: " />
 
             </LinearLayout>
 
@@ -283,12 +283,12 @@
 
                 <!-- EditText for 'Data' -->
                 <TextView
-                    android:id="@+id/data4"
+                    android:id="@+id/loca4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:background="@null"
-                    android:text="Data: " />
+                    android:text="Localização: " />
 
             </LinearLayout>
 
@@ -334,12 +334,12 @@
 
                 <!-- EditText for 'Data' -->
                 <TextView
-                    android:id="@+id/data5"
+                    android:id="@+id/loca5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:background="@null"
-                    android:text="Data: " />
+                    android:text="Localização: " />
 
             </LinearLayout>
 

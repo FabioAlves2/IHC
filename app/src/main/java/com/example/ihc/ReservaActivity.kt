@@ -80,7 +80,7 @@ class ReservaActivity: ComponentActivity() {
 
         //Botão do perfil
         binding.settingsCogIcon.setOnClickListener{
-            val intent = Intent(this@ReservaActivity, AccountActivity::class.java)
+            val intent = Intent(this@ReservaActivity, ProfileActivity::class.java)
             startActivity(intent)
         }
 

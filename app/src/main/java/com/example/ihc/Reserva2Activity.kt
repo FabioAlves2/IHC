@@ -105,7 +105,7 @@ class Reserva2Activity :  ComponentActivity() {
         }
 
         binding.settingsCogIcon.setOnClickListener{
-            val intent = Intent(this@Reserva2Activity, AccountActivity::class.java)
+            val intent = Intent(this@Reserva2Activity, ProfileActivity::class.java)
             startActivity(intent)
         }
 

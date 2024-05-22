@@ -68,7 +68,7 @@ class Cacifo2Activity : ComponentActivity() {
         }
 
         binding.settingsCogIcon.setOnClickListener{
-            val intent = Intent(this@Cacifo2Activity, AccountActivity::class.java)
+            val intent = Intent(this@Cacifo2Activity, ProfileActivity::class.java)
             startActivity(intent)
         }
 

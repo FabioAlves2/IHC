@@ -1,6 +1,7 @@
 package com.example.ihc
 
 
+import android.app.AlertDialog
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
@@ -27,12 +28,12 @@ class ProfileActivity : ComponentActivity() {
         binding = PerfilBinding.inflate(layoutInflater)
         auth = Firebase.auth
         database = Firebase.database
+        ref = database.getReference("Cacifo")
         uref = database.getReference("Utilizadores")
         val user = auth.currentUser
 
         setContentView(binding.root)
 
-        //Associar o cacifo ao utilizador
         if (user != null) {
             uref.child(user.uid).get().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -44,15 +45,45 @@ class ProfileActivity : ComponentActivity() {
                     binding.NomeText.text=nome
                     binding.emailText.text=email
                     binding.telefoneText.text=telefone
+                    val cacifo = snap.child("cacifo").value.toString()
+                    Log.d(ContentValues.TAG, "Value is: $cacifo")
+                    if(cacifo!="null"){
+                        binding.square1.text= cacifo
+                        binding.quadrado.setOnClickListener {
+                            val intent = Intent(this@ProfileActivity, PcacifoActivity::class.java)
+                            intent.putExtra("path",cacifo)
+                            startActivity(intent)
+                        }
+                    }
+
                 } else {
                     Log.w(ContentValues.TAG, "Failed to read value.")
                     Toast.makeText(this@ProfileActivity, "Erro!", Toast.LENGTH_SHORT).show()
                 }
             }
+
             setContentView(binding.root)
 
+            binding.logout.setOnClickListener {
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Logout")
+                builder.setMessage("Quer mesmo fazer logout da sua conta?")
+                builder.setPositiveButton("Sim") { _, _ ->
+                    // Navigate to MainActivity
+                    Firebase.auth.signOut()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                }
+                builder.setNegativeButton("Cancelar") { _, _ ->
+                    // Do nothing, simply dismiss the dialog
+                }
+                val dialog = builder.create()
+                dialog.show()
+            }
+
             binding.back.setOnClickListener {
-                val intent = Intent(this@ProfileActivity, AccountActivity::class.java)
+                val intent = Intent(this@ProfileActivity, HomeActivity::class.java)
                 startActivity(intent)
             }
 
